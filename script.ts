@@ -8,7 +8,7 @@ async function mostpopular() {
     const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&language=fr-FR&page=1`);
     const data = await response.json();
     console.log(data.results);
-const scrollDiv = document.querySelector('.scroll');
+    const scrollDiv = document.querySelector('.scroll');
 
     const popularMovies = data.results;
     popularMovies.forEach(movie => {
@@ -32,7 +32,7 @@ async function toprated() {
     const response = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=b7bdd2da6dc32e236c3e6fd84277c32b&language=fr-FR&page=1`);
     const data = await response.json();
     console.log(data.results);
-const scrollDiv = document.getElementById('toprated');
+    const scrollDiv = document.getElementById('toprated');
 
     const popularMovies = data.results;
     popularMovies.forEach(movie => {
@@ -56,7 +56,7 @@ async function upcoming() {
     const response = await fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=b7bdd2da6dc32e236c3e6fd84277c32b&language=en-US&page=1`);
     const data = await response.json();
     console.log(data.results);
-const scrollDiv = document.getElementById('latest');
+    const scrollDiv = document.getElementById('latest');
 
     const popularMovies = data.results;
     popularMovies.forEach(movie => {
