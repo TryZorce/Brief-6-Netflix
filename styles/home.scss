@@ -1,0 +1,21 @@
+html {
+    background-color: black;
+}
+header {
+    position: sticky;
+    top: 0;
+    
+}
+.header {
+    position: sticky;
+    display: flex;
+    width: 100vw;
+    background-color: #161718;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.banner_netflix{
+    width: 100vw;
+}

@@ -1,7 +1,45 @@
 @import url(styles/details.scss);
 @import url(styles/home.scss);
 @import url(styles/search.scss);
+
 * {
     margin: 0;
     padding: 0;
+}
+.netflix_logo {
+    margin-right: auto;
+    width: 20vw;
+}
+
+.search-icon {
+    width: 40px;
+}
+
+.search_button {
+    margin-right: 40px;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: 60px;
+    background-color: #161718;
+}
+
+.display_flex{
+    display: flex;
+}
+.scroll {
+    display: flex;
+    flex-direction: row;
+    height: 280px;
+    overflow-x: auto;
+ }
+
+p{
+    color: antiquewhite;
+    margin: 20px;
+    font-size: x-large;
 }
