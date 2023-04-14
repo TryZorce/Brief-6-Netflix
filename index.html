@@ -15,32 +15,39 @@
             <img class="netflix_logo" src="./assets/Netflix.svg">
             <img class="search-icon" src="./assets/search-icon.svg">
             <input size="10" type="search" id="site-search">
-            <button class="search_button">Search</button>
+            <div class="popup">
+                <div class="popup-content">
+                    <p id="popup-results"></p>
+                    <button id="close-popup">X</button>
+                </div>
+                <ul id="search-results"></ul>
+            </div>
         </div>
     </header>
-    <img class="banner_netflix" src="./assets/banner_netflix.jpg">
-    <p> Les Plus Populaires</p>
+    <div class="netflix_banner"></div>
+    <p>Les Plus Populaires</p>
     <div class="display_flex">
         <div id="mostpopular" class="scroll"></div>
     </div>
-    <p> Les Mieux Classée</p>
+    <p>Les Mieux Classées</p>
     <div class="display_flex">
         <div id="toprated" class="scroll"></div>
     </div>
-    <p> A Venir</p>
+    <p>A Venir</p>
     <div class="display_flex">
         <div id="latest" class="scroll"></div>
     </div>
-    
+
     <script type="module" src="script.ts"></script>
+
+    <footer>
+        <div class="footer">
+            <img src="./assets/facebook.svg">
+            <img src="./assets/twitter.svg">
+            <img src="./assets/youtube.svg">
+            <img src="./assets/instagram.svg">
+        </div>
+    </footer>
 </body>
-<footer>
-    <div class="footer">
-        <img src="./assets/facebook.svg">
-        <img src="./assets/twitter.svg">
-        <img src="./assets/youtube.svg">
-        <img src="./assets/instagram.svg">
-    </div>
-</footer>
 
 </html>
