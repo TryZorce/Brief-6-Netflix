@@ -26,7 +26,7 @@
 }
 
 #site-search{
-    margin-right: 40px;
+    margin-right: 10px;
 }
 
 .footer {
@@ -46,7 +46,9 @@
     display: flex;
     flex-direction: row;
     height: 280px;
-    overflow-x: auto;
+    overflow-x:auto;
+    gap : 10px;
+    padding-left: 10px;
 }
 
 p {

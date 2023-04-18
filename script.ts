@@ -3,7 +3,7 @@
 import {search} from './pages/search'
 import { api_key } from "./apikey";
 
-// Fonction qui récupère 
+// Barre de Recherche
 search();
 
 // Récuperer film + populaire

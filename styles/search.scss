@@ -10,6 +10,8 @@
   overflow: auto;
 }
 
+
+
 .popup-content h2 {
   margin-top: 0;
 }
@@ -26,4 +28,11 @@
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+li{
+
+  img{
+    width: 50%;
+  }
 }
