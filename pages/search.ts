@@ -30,8 +30,8 @@ export function search() {
     }
   });
 
-  searchInput.addEventListener('keydown', async function(event) {
-    if (event.key === 'Enter') { 
+  searchInput.addEventListener('keydown', async function (event) {
+    if (event.key === 'Enter') {
       const searchTerm = searchInput.value.trim(); // retire les espaces en début et en fin de la chaîne
 
       if (searchTerm.length > 0) {
@@ -53,7 +53,7 @@ export function search() {
             const title = result.title;
             const posterPath = result.poster_path;
             const listItem = document.createElement('li');
-          
+
             if (posterPath) {
               const img = document.createElement('img');
               img.src = `https://image.tmdb.org/t/p/w300/${posterPath}`;
@@ -63,14 +63,14 @@ export function search() {
               img.src = 'https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png';
               listItem.appendChild(img);
             }
-          
+
             const titleElement = document.createElement('h3');
             titleElement.innerText = title;
             listItem.appendChild(titleElement);
-          
+
             searchResultsElement?.appendChild(listItem);
           });
-          
+
 
           if (popup) {
             popup.style.display = "flex";
@@ -83,8 +83,8 @@ export function search() {
     }
   });
 
-  btn_site_search.addEventListener('keydown', async function(event) {
-    if (event.key === 'Enter') { 
+  btn_site_search.addEventListener('click', async function (event) {
+    if (MouseEvent) {
       const searchTerm = searchInput.value.trim(); // retire les espaces en début et en fin de la chaîne
 
       if (searchTerm.length > 0) {
@@ -106,7 +106,7 @@ export function search() {
             const title = result.title;
             const posterPath = result.poster_path;
             const listItem = document.createElement('li');
-          
+
             if (posterPath) {
               const img = document.createElement('img');
               img.src = `https://image.tmdb.org/t/p/w300/${posterPath}`;
@@ -116,14 +116,14 @@ export function search() {
               img.src = 'https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png';
               listItem.appendChild(img);
             }
-          
+
             const titleElement = document.createElement('h3');
             titleElement.innerText = title;
             listItem.appendChild(titleElement);
-          
+
             searchResultsElement?.appendChild(listItem);
           });
-          
+
 
           if (popup) {
             popup.style.display = "flex";

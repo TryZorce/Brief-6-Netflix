@@ -5,6 +5,11 @@
 * {
     margin: 0;
     padding: 0;
+
+}
+
+html {
+    overflow-x: hidden;
 }
 
 .netflix_logo {
@@ -22,10 +27,10 @@
 }
 
 .search-icon {
-    width: 40px;
+    width: 20px;
 }
 
-#site-search{
+#site-search {
     margin-right: 10px;
 }
 
@@ -46,10 +51,10 @@
     display: flex;
     flex-direction: row;
     height: 280px;
-    overflow-x:auto;
-    gap : 10px;
+    overflow-x: auto;
+    gap: 10px;
     padding-left: 10px;
-}
+}   
 
 p {
     color: antiquewhite;
@@ -57,6 +62,6 @@ p {
     font-size: x-large;
 }
 
-.display_none{
+.display_none {
     display: none;
 }
