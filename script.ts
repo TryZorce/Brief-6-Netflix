@@ -1,11 +1,10 @@
-// import {details} from './pages/details'
+
 // import {home} from './pages/home'
 import { search } from './pages/search'
 import { api_key } from "./apikey";
 
 // Barre de Recherche
 search();
-
 // Récuperer film + populaire
 
 async function mostpopular_banner() {
