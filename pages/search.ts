@@ -80,16 +80,19 @@ export function search() {
   
         searchResults.forEach((result) => {
           const title = result.title;
-          const posterPath = result.poster_path;
-          const listItem = document.createElement('li');
+          const posterPath = result.poster_path;const listItem = document.createElement('li');
+          listItem.addEventListener('click', function() {
+            console.log("test");
+            
+          });
   
           if (posterPath) {
             const img = document.createElement('img');
-            img.src = `https://image.tmdb.org/t/p/w300/${posterPath}`;
+            img.src = `https://image.tmdb.org/t/p/w185/${posterPath}`;
             listItem.appendChild(img);
           } else {
             const img = document.createElement('img');
-            img.src = 'https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png';
+            img.src = 'https://www.cjoint.com/doc/20_12/JLFrj6Sanqu_image-not-found.png';
             listItem.appendChild(img);
           }
   
@@ -131,7 +134,7 @@ export function search() {
 
           // Ajoute le titre de recherche en haut de la popup
           const popupTitleElement = document.createElement('h2');
-          popupTitleElement.innerText = searchTerm;
+          popupTitleElement.innerText ="Votre recherche : " + searchTerm;
           searchResultsElement?.appendChild(popupTitleElement);
 
           // Crée un élément HTML pour chaque résultat de recherche et l'ajoute à la liste de résultats
@@ -142,11 +145,11 @@ export function search() {
 
             if (posterPath) {
               const img = document.createElement('img');
-              img.src = `https://image.tmdb.org/t/p/w300/${posterPath}`;
+              img.src = `https://image.tmdb.org/t/p/w185/${posterPath}`;
               listItem.appendChild(img);
             } else {
               const img = document.createElement('img');
-              img.src = 'https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png';
+              img.src = 'https://www.cjoint.com/doc/20_12/JLFrj6Sanqu_image-not-found.png';
               listItem.appendChild(img);
             }
 
@@ -184,7 +187,7 @@ export function search() {
 
           // Ajoute le titre de recherche en haut de la popup
           const popupTitleElement = document.createElement('h2');
-          popupTitleElement.innerText = searchTerm;
+          popupTitleElement.innerText = "Votre recherche : " + searchTerm;
           searchResultsElement?.appendChild(popupTitleElement);
 
           // Crée un élément HTML pour chaque résultat de recherche et l'ajoute à la liste de résultats
@@ -195,11 +198,11 @@ export function search() {
 
             if (posterPath) {
               const img = document.createElement('img');
-              img.src = `https://image.tmdb.org/t/p/w300/${posterPath}`;
+              img.src = `https://image.tmdb.org/t/p/w185/${posterPath}`;
               listItem.appendChild(img);
             } else {
               const img = document.createElement('img');
-              img.src = 'https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png';
+              img.src = 'https://www.cjoint.com/doc/20_12/JLFrj6Sanqu_image-not-found.png';
               listItem.appendChild(img);
             }
 

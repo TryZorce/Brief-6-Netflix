@@ -54,7 +54,7 @@ html {
     overflow-x: auto;
     gap: 10px;
     padding-left: 10px;
-}   
+}
 
 p {
     color: antiquewhite;
@@ -64,4 +64,25 @@ p {
 
 .display_none {
     display: none;
+}
+
+img {
+    padding : 5px
+}
+.hover {
+    img:hover {
+    cursor: pointer;
+    border: 3px solid #D81F26;
+    padding: 0px;
+} }
+
+::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+    background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #D81F26;
+    border-radius: 10px;
 }
