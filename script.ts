@@ -18,11 +18,13 @@ async function mostpopular_banner() {
 
     const poster = document.createElement('img');
     poster.setAttribute('src', 'https://image.tmdb.org/t/p/w780' + firstMovie.backdrop_path);
-    poster.setAttribute('id', firstMovie.id); // ajouter un ID unique
+    poster.setAttribute('id', firstMovie.id);
     poster.addEventListener('click', async () => {
       const popup = window.open("", "popup", "width=500,height=500");
       const popupContent = document.createElement("div");
-
+      
+      popupContent.classList.add("popup_content")
+      // Mettre code pour donner une classe a la div
       const popupPoster = document.createElement('img');
       popupPoster.setAttribute('src', 'https://image.tmdb.org/t/p/w780' + firstMovie.backdrop_path);
       popupPoster.style.width = '100%';
@@ -32,7 +34,6 @@ async function mostpopular_banner() {
       popupTitle.textContent = firstMovie.title;
       popupContent.appendChild(popupTitle);
 
-      // Récupérer les informations sur le film via l'API en utilisant l'ID unique du film
       const creditsResponse = await fetch(`https://api.themoviedb.org/3/movie/${firstMovie.id}/credits?api_key=${api_key}&language=fr-FR`);
       const creditsData = await creditsResponse.json();
       const director = creditsData.crew.find(person => person.job === "Director");

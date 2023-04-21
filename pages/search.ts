@@ -80,7 +80,8 @@ export function search() {
   
         searchResults.forEach((result) => {
           const title = result.title;
-          const posterPath = result.poster_path;const listItem = document.createElement('li');
+          const posterPath = result.poster_path;
+          const listItem = document.createElement('li');
           listItem.addEventListener('click', function() {
             console.log("test");
             
@@ -142,6 +143,46 @@ export function search() {
             const title = result.title;
             const posterPath = result.poster_path;
             const listItem = document.createElement('li');
+            listItem.addEventListener("click", async() => {
+
+              {
+                const popup = window.open("", "popup", "width=500,height=500");
+                const popupContent = document.createElement("div");
+                
+                popupContent.classList.add("popup_content")
+                // Mettre code pour donner une classe a la div
+                const popupPoster = document.createElement('img');
+                popupPoster.setAttribute('src', 'https://image.tmdb.org/t/p/w780' + result.backdrop_path);
+                popupPoster.style.width = '100%';
+                popupContent.appendChild(popupPoster);
+          
+                const popupTitle = document.createElement('h2');
+                popupTitle.textContent = result.title;
+                popupContent.appendChild(popupTitle);
+          
+                const creditsResponse = await fetch(`https://api.themoviedb.org/3/movie/${result.id}/credits?api_key=${api_key}&language=fr-FR`);
+                const creditsData = await creditsResponse.json();
+                const director = creditsData.crew.find(person => person.job === "Director");
+          
+                const popupDirector = document.createElement('div');
+                popupDirector.textContent = `Créateur: ${director.name}`;
+                popupContent.appendChild(popupDirector);
+          
+                const popupRating = document.createElement('div');
+                popupRating.textContent = `Note: ${result.vote_average}`;
+                popupContent.appendChild(popupRating);
+          
+                const popupOverview = document.createElement('p');
+                popupOverview.textContent = result.overview;
+                popupContent.appendChild(popupOverview);
+          
+                const popupReleaseDate = document.createElement('div');
+                popupReleaseDate.textContent = `Date de sortie: ${result.release_date}`;
+                popupContent.appendChild(popupReleaseDate);
+          
+                popup?.document.body.appendChild(popupContent);
+              };
+            })
 
             if (posterPath) {
               const img = document.createElement('img');
@@ -195,6 +236,46 @@ export function search() {
             const title = result.title;
             const posterPath = result.poster_path;
             const listItem = document.createElement('li');
+            listItem.addEventListener("click", async() => {
+
+              {
+                const popup = window.open("", "popup", "width=500,height=500");
+                const popupContent = document.createElement("div");
+                
+                popupContent.classList.add("popup_content")
+                // Mettre code pour donner une classe a la div
+                const popupPoster = document.createElement('img');
+                popupPoster.setAttribute('src', 'https://image.tmdb.org/t/p/w780' + result.backdrop_path);
+                popupPoster.style.width = '100%';
+                popupContent.appendChild(popupPoster);
+          
+                const popupTitle = document.createElement('h2');
+                popupTitle.textContent = result.title;
+                popupContent.appendChild(popupTitle);
+          
+                const creditsResponse = await fetch(`https://api.themoviedb.org/3/movie/${result.id}/credits?api_key=${api_key}&language=fr-FR`);
+                const creditsData = await creditsResponse.json();
+                const director = creditsData.crew.find(person => person.job === "Director");
+          
+                const popupDirector = document.createElement('div');
+                popupDirector.textContent = `Créateur: ${director.name}`;
+                popupContent.appendChild(popupDirector);
+          
+                const popupRating = document.createElement('div');
+                popupRating.textContent = `Note: ${result.vote_average}`;
+                popupContent.appendChild(popupRating);
+          
+                const popupOverview = document.createElement('p');
+                popupOverview.textContent = result.overview;
+                popupContent.appendChild(popupOverview);
+          
+                const popupReleaseDate = document.createElement('div');
+                popupReleaseDate.textContent = `Date de sortie: ${result.release_date}`;
+                popupContent.appendChild(popupReleaseDate);
+          
+                popup?.document.body.appendChild(popupContent);
+              };
+            })
 
             if (posterPath) {
               const img = document.createElement('img');
